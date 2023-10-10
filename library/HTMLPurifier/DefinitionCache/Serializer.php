@@ -201,7 +201,7 @@ class HTMLPurifier_DefinitionCache_Serializer extends HTMLPurifier_DefinitionCac
             // set permissions of the new file (no execute)
             $chmod = $config->get('Cache.SerializerPermissions');
             if ($chmod !== null) {
-                chmod($file, $chmod & 0666);
+                chmod($file, $chmod);
             }
         }
         return $result;
